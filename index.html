@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <meta name="author" content="Gokul Raja A" />
+    <meta
+      name="description"
+      content="A To-Do List application developed by Gokul Raja A"
+    />
+    <meta
+      name="keywords"
+      content="To-Do List, Task Manager, Gokul Raja, Full Stack Developer"
+    />
+
+    <!-- Favicon and Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/ico.png" type="image/png" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <title>To-Do-List - Gokul Raja</title>
+  </head>
+
+  <body>
+    <!-- Loading Overlay -->
+    <div id="overlay">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="home">
+      <div class="container-main">
+        <!-- Left Sidebar -->
+        <div class="container-left" id="containerLeft">
+          <div class="dots">
+            <div id="d1"></div>
+            <div id="d2"></div>
+            <div id="d3"></div>
+          </div>
+
+          <!-- Profile Section -->
+          <div class="profile center top">
+            <img src="img/profile.png" alt="Profile Picture" />
+            <div>
+              <p class="name" id="name">Loading...</p>
+              <p class="email" id="email">Loading...</p>
+            </div>
+          </div>
+
+          <!-- Navigation Menu -->
+          <div class="menu center">
+            <div class="search-holder">
+              <input
+                type="search"
+                name="search"
+                id="search"
+                placeholder=" Search"
+              />
+            </div>
+            <div class="list">
+              <ul>
+                <li id="o1">
+                  <a href="#"
+                    ><i class="bx bx-sun" id="i1"></i><span>My day</span></a
+                  >
+                </li>
+                <li id="o2">
+                  <a href="#"
+                    ><i class="bx bx-grid" id="i2"></i><span>This week</span></a
+                  >
+                </li>
+                <li id="o3">
+                  <a href="#"
+                    ><i class="bx bx-calendar-event" id="i3"></i
+                    ><span>This month</span></a
+                  >
+                </li>
+                <li id="o4">
+                  <a href="#"
+                    ><i class="bx bx-extension" id="i4"></i
+                    ><span>All tasks</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Logout Section -->
+          <div class="logout center">
+            <hr />
+            <a href="#" id="logoutLink"
+              ><i class="bx bx-log-out"></i><span>Logout</span></a
+            >
+          </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="container-right">
+          <div class="hamburger-container">
+            <div class="burger" id="burgerIcon">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+
+          <!-- Main Content Section -->
+          <div class="container-sub center">
+            <div class="header">
+              <h2 id="header_title">No tasks</h2>
+              <div class="buttons">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <!-- Task Cards Holder -->
+            <div class="card-holder" id="TaskContainer">
+              <!-- Task cards will be dynamically generated here -->
+            </div>
+
+            <!-- Add New Task -->
+            <div class="add-new">
+              <div class="card-new align">
+                <div class="group1">
+                  <div style="width: 70%">
+                    <i class="bx bx-plus"></i>
+                    <input
+                      type="text"
+                      name="todo"
+                      id="todo"
+                      placeholder="Add a task"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <input type="date" name="date" id="duedate" required />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/script.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        document.getElementById("overlay").style.display = "none";
+      });
+    </script>
+
+    <!-- Developer Information for SEO -->
+    <!-- <footer>
+      <p>Developed by Gokul Raja A</p>
+      <p>
+        Github:
+        <a href="https://github.com/Gokul-Raja84" target="_blank"
+          >Gokul-Raja84</a
+        >
+      </p>
+      <p>
+        Portfolio:
+        <a href="https://gokul-raja84.github.io/" target="_blank"
+          >gokul-raja84.github.io</a
+        >
+      </p>
+    </footer> -->
+  </body>
+</html>
